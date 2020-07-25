@@ -27,3 +27,27 @@ following:<br/>
 ```sh
 $ go run main.go migrate
 ```
+3. User component should be up and running to handle requests
+4. Run the saver component
+```sh
+$ go run main.go server
+```
+5. Run the checker component
+6. Run the server component
+
+Now we can send request to the APIs,<br/>
+Register
+```sh
+$ curl -X POST -d '{"Email": "elahe.dstn@gmail.com", "Password": "XXXX"}' 
+-H 'Content-Type: application/json' 127.0.0.1:8080/register
+```
+Login
+```sh
+$ curl -X POST -d '{"Email": "elahe.dstn@gmail.com", "Password": "XXXX"}' 
+-H 'Content-Type: application/json' 127.0.0.1:8080/login
+```
+This returns a token
+```sh
+$ curl -X POST -d '{"URL": "https://www.google.com", "Period": 2}' 
+-H 'Content-Type: application/json' -H 'Authorization: token' 127.0.0.1:8080/url
+```

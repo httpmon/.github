@@ -51,3 +51,12 @@ This returns a token
 $ curl -X POST -d '{"URL": "https://www.google.com", "Period": 2}' 
 -H 'Content-Type: application/json' -H 'Authorization: token' 127.0.0.1:8080/url
 ```
+## Creating tables
+This was somehow a challenge in my code so I decided to write about it.At first I used raw SQL code in my code but<br/>
+obviously it's not a good idea cause it needs so much hard code then I used gorm package but I could not write all<br/>
+the SQL commands I wanted using gorm like "IF NOT EXISTS" then I got familiar with [migrate](https://github.com/golang-migrate/migrate),<br/>
+this way I can write any SQL code I want and there is no SQL coding in between my codes.Maintaining code will be easier<br/>
+too, to create migration sql files I ran the commands below:<br/>
+```sh
+$ migrate create -ext sql name_of_file
+```

@@ -5,7 +5,7 @@ that project started to become larger and larger which was really hard to mainta
 [Parham Alvani](https://github.com/1995parham) suggested to change the project to smaller microservices that were much
 easier to maintain, here is how I want to break the project to smaller projects.
 
-![architecture](microservice.png)
+<img alt="architecture" src="microservice.png" align="center" />
 
 ## User repository
 
@@ -80,4 +80,3 @@ too, to create migration sql files I ran the commands below:
 ```sh
 $ migrate create -ext sql name_of_file
 ```
-

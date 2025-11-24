@@ -8,7 +8,7 @@ that project started to become larger and larger which was really hard to mainta
 easier to maintain, here is how I want to break the project to smaller projects.
 
 <p align="center">
-  <img alt="architecture" src="microservice.png" />
+  <img alt="architecture" src="../microservice.png" />
 </p>
 
 ## User repository
